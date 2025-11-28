@@ -1,0 +1,32 @@
+.coupon {
+  border: 5px dotted #bbb;
+  width: 80%;
+  border-radius: 15px;
+  margin: 0 auto;
+  max-width: 600px;
+  padding: 20px;
+  background-color: white;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.coupon img {
+  max-width: 100%;
+  height: auto;
+}
+
+.coupon h2 {
+  color: #008930;
+  margin-top: 10px;
+}
+
+.coupon .code {
+  background: #ccc;
+  padding: 3px;
+  font-weight: bold;
+}
+
+.coupon .expire {
+  color: red;
+  font-size: 14px;
+}

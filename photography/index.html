@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Image Gallery</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Heading -->
+<div class="heading">
+    <h1>Image Gallery</h1>
+</div>
+
+<!-- Gallery Container -->
+<div class="gallery" id="gallery">
+    <!-- All images will be generated dynamically by JS -->
+</div>
+
+<!-- Modal -->
+<div id="myModal" class="modal">
+    <span class="close" onclick="closeModal()">&times;</span>
+    <img class="modal-content" id="modalImage">
+</div>
+
+<!-- JavaScript -->
+<script>
+const gallery = document.getElementById('gallery');
+
+// Generate images 1–100 dynamically
+for (let i = 1; i <= 24; i++) {
+    const div = document.createElement('div');
+    div.className = 'gallery-item';
+    
+    const img = document.createElement('img');
+    img.src = `images/${i}.png`;
+    img.alt = `Image ${i}`;
+    img.onclick = () => openModal(`images/${i}.png`);
+    
+    div.appendChild(img);
+    gallery.appendChild(div);
+}
+
+// Modal functions
+function openModal(src) {
+    document.getElementById("modalImage").src = src;
+    document.getElementById("myModal").style.display = "block";
+}
+
+function closeModal() {
+    document.getElementById("myModal").style.display = "none";
+}
+</script>
+
+</body>
+</html>
